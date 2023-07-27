@@ -29,6 +29,10 @@ cut_pretraining_data.py: 用mT5生成QNews資料集
 
 1. pretrain_bienc/cut_pretraining_data.py 生成資料集
 2. pretrain_bienc/filter_data.py 資料清洗
-3. pretrain_bienc/pretrain_bienc 用1的資料集預訓練DSSM
+3. pretrain_bienc/pretrain 用1的資料集預訓練DSSM
+   > pretrain_bienc\pretrain.py", line 37, in <module>
+    model = torch.nn.DataParallel(model, device_ids=[1,3])
+    這邊因為我的 device id 是 0 所以我改掉了。
 4. further_pretraining.py 進一步預訓練MRC模型
 5. finetuning.py 微調MRC模型
+

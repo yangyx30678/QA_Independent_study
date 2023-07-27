@@ -34,7 +34,7 @@ def get_batch(sample):
 model = biencoder_model()
 # model = torch.load('./saved_model/roberta_retriever_1_8800')
 # model.load_state_dict(torch.load('./saved_model/roberta_retriever_1_1400', map_location='cpu')['model'])
-model = torch.nn.DataParallel(model, device_ids=[1,3])
+model = torch.nn.DataParallel(model, device_ids=[0])
 device = torch.device('cuda:1' if torch.cuda.is_available() else 'cpu')
 train_dataloader = DataLoader(dl, batch_size=12, collate_fn=get_batch, shuffle=True)
 
