@@ -4,7 +4,7 @@ import urllib
 from torch.utils.data import Dataset, DataLoader
 import re
 
-file_dict = '../datasets/CNA/data/'
+file_dict = './datasets/CNA/data/'
 folder_list = os.listdir(file_dict)
 
 class CNA(Dataset):

@@ -5,7 +5,7 @@ import os
 # import numpy
 # from public_params import articles
 from replace_punc import punctuations
-root = '../datasets/zhwiki_odqa/'
+root = './datasets/zhwiki_odqa/'
 import json
 from multiprocessing import Pool
 import random
